@@ -2,14 +2,14 @@
 #include <string.h>
 
 /**
- *  * main - Prints a string of letters
-
- *  * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char str1[] = "Programming is like building a multilingual puzzle";
+	char str1[] = "\"Programming is like building a multilingual puzzle";
 
 	puts(str1);
 
