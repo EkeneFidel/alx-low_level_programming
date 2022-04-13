@@ -12,7 +12,7 @@ int main(void)
 	long int a = 1;
 	long int b = 2;
 	long int k;
-	int count = 0;
+	int count = 2;
 
 	printf("%lu, ", a);
 	while (count <= 50)
