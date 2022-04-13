@@ -25,7 +25,8 @@ void print_natural_number(void)
  * Description: Runs print_natural_number
  * Return: 0
  */
-void main(void)
+int main(void)
 {
 	print_natural_number();
+	return (0);
 }
