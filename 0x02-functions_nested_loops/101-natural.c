@@ -17,10 +17,11 @@ void print_natural_number(void)
 			sum += a;
 		}
 	}
-	printf("%d", sum);
+	printf("%d\n", sum);
 }
 
-/* main- Entry function
+/**
+ * main- Entry function
  *
  * Description: Runs print_natural_number
  * Return: 0
