@@ -9,21 +9,21 @@
 
 int main(void)
 {
-	long long int a = 1;
-	long long int b = 2;
-	long long int k;
+	long int a = 1;
+	long int b = 2;
+	long int k;
 	int count = 0;
 
-	printf("%llu, ", a);
+	printf("%lu, ", a);
 	while (count <= 50)
 	{
 		if (count == 50)
 		{
-			printf("%llu\n", b);
+			printf("%lu\n", b);
 		}
 		else
 		{
-			printf("%llu, ", b);
+			printf("%lu, ", b);
 		}
 		k = b;
 		b += a;
