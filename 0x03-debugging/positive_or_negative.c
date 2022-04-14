@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * positive_or_negative - Entry Functio
  *
- * @n - Integer to check
+ * @n: Integer to check
  * Description: Get a random number and print the number
  * and if it is positive, negative, or zero
  * Return: 0
