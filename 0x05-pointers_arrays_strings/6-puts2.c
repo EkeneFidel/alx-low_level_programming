@@ -3,15 +3,18 @@
  * puts2 - Prints out every other char of the string.
  * @str: input string to print.
  */
-void puts2(char *str)
+void print_rev(char *s)
 {
-	int i;
+	int i = 0;
 
-	while (str[i] != '\0')
+	while (s[i] != 0)
 	{
-		if (i % 2 == 0)
-			_putchar(str[i]);
 		i++;
+	}
+	while (i > 0)
+	{
+		i--;
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }
