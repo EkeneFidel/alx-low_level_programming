@@ -1,69 +1,24 @@
-#include "main.h"
 /**
- * _pow - function that return the
- * value of x raised to the power of y
+ * binary_to_uint - convert binary string to decimal
+ * @b: binary string
  *
- * @x: parameter to base
- * @y: parameter of pow
- *
- * Return: End program
+ * Return: decimal (unsigned int)
  */
-int _pow(int x, int y)
-{
-	if (y < 0)
-	{
-		return (-1);
-	}
-	else if (y == 0)
-	{
-		return (1);
-	}
-	else
-	{
-		y--;
-		x = x * _pow(x, y);
-		return (x);
-	}
 
-	return (0);
-}
-/**
- * binary_to_uint - function that converts a binary number to an
- * unsigned int
- *
- * @b: Pointer with the string whit the number to convert
- *
- * Return: The number converted
- */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int sum = 0;
-	int i, x, n;
+	unsigned int decimal;
+	unsigned int i;
 
-	if (b == NULL)
+	for (decimal = 0, i = 0; b[i] != '\0'; i++)
 	{
-		return (0);
+		if (b[i] == '1')
+			decimal = (decimal << 1) | 1;
+		else if (b[i] == '0')
+			decimal <<= 1;
+		else if (b[i] != '0' && b[i] != '1')
+			return (0);
 	}
 
-	n = strlen(b) - 1;
-
-	/* Realizamos la operacion para hallar suma */
-	for (x = 0, i = 0; n >= x; n--)
-	{
-		switch (b[i])
-		{
-			case '1':
-				sum = sum + _pow(2, n);
-				i++;
-				break;
-			case '0':
-				sum = sum + 0;
-				i++;
-				break;
-			default:
-				return (0);
-		}
-	}
-
-	return (sum);
+	return (decimal);
 }
